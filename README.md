@@ -4,16 +4,16 @@
 
 The following functions are (to be) tested:
 
-[ ] Memoize
-[ ] IsEmpty
-[ ] Slice
-[x] Clamp
-[ ] ToFinite
-[ ] IsTypedArray
-[ ] Get
-[ ] CamelCase
-[ ] Compact
-[ ] Chunk
+- Memoize
+- IsEmpty
+- Slice
+- Clamp
+- ToFinite
+- IsTypedArray
+- Get
+- CamelCase
+- Compact
+- Chunk
 
 # Student template
 
