@@ -1,5 +1,20 @@
 [![Node.js CI](https://github.com/brndd/COMP.SE.200-2021-2022-1/actions/workflows/node.js.yml/badge.svg)](https://github.com/brndd/COMP.SE.200-2021-2022-1/actions/workflows/node.js.yml)
 
+# Tested functions
+
+The following functions are (to be) tested:
+
+[ ] Memoize
+[ ] IsEmpty
+[ ] Slice
+[x] Clamp
+[ ] ToFinite
+[ ] IsTypedArray
+[ ] Get
+[ ] CamelCase
+[ ] Compact
+[ ] Chunk
+
 # Student template
 
 ## Purpose of this repository
