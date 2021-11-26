@@ -11,7 +11,7 @@ on:
 
 jobs:
   test:
-
+    name: NodeJS Tests
     runs-on: ubuntu-latest
 
     strategy:
@@ -40,6 +40,7 @@ jobs:
         parallel: true
         
   finish:
+    name: Coveralls
     needs: test
     if: always()
     runs-on: ubuntu-latest
