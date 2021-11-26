@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "test": "c8 --reporter=text mocha",
-    "coverage": "c8 report --reporter=text-lcov | coveralls"
+    "test-coverage": "c8 --reporter=text --reporter=lcov mocha"
   },
   "author": "",
   "license": "MIT",
