@@ -1,4 +1,4 @@
-[![Node.js CI](https://github.com/brndd/COMP.SE.200-2021-2022-1/actions/workflows/node.js.yml/badge.svg)](https://github.com/brndd/COMP.SE.200-2021-2022-1/actions/workflows/node.js.yml)
+[![Node.js CI](https://github.com/brndd/COMP.SE.200-2021-2022-1/actions/workflows/node.js.yml/badge.svg)](https://github.com/brndd/COMP.SE.200-2021-2022-1/actions/workflows/node.js.yml) [![Coverage Status](https://coveralls.io/repos/github/brndd/COMP.SE.200-2021-2022-1/badge.svg?branch=main&t=ls1iKt)](https://coveralls.io/github/brndd/COMP.SE.200-2021-2022-1?branch=main)
 
 # Tested functions
 
