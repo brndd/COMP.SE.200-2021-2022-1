@@ -15,6 +15,20 @@ The following functions are (to be) tested:
 - Compact
 - Chunk
 
+# Container
+
+The supplied Dockerfile can be used to build a container to run the tests in. It has been tested with Podman, but is very simple and should also work with Docker. Here are brief instructions for its usage:
+
+**Build the container:**
+`docker build . -t node:test`
+
+This will build the container and assign it the tag `node:test`.
+
+**Run the container:**
+`docker run --rm node:test`
+
+This will run the container, printing the test output to stdout, and then remove the container (but not the built image). If you wish to remove the built image, which you should do to free up disk space if you do not intend to test the application again, use `docker rmi node:test`. You may also wish to remove the base node image with `docker rmi node:16-alpine`.
+
 # Student template
 
 ## Purpose of this repository
