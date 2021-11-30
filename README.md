@@ -29,6 +29,13 @@ This will build the container and assign it the tag `node:test`.
 
 This will run the container, printing the test output to stdout, and then remove the container (but not the built image). If you wish to remove the built image, which you should do to free up disk space if you do not intend to test the application again, use `docker rmi node:test`. You may also wish to remove the base node image with `docker rmi node:16-alpine`.
 
+**Run the container with interactive shell:**
+`podman run -it --rm --security-opt label=disable -v $PWD:/usr/src/test node:test /bin/ash`
+
+This is a bit of a mouthful, but will mount the current directory (which should be your development directory) as a volume in the container and give you an interactive shell in which to run `npm test` at your leisure. This is useful for development, as it lets you avoid rebuilding the container every time you want to re-run your tests.
+
+Note the `--security-opt label=disable` option. This is necessary if the host system uses SELinux, as otherwise the container will be unable to access the volume if it is located in a restricted directory (eg. the user's home directory). A less convenient alternative to this is to omit this option and instead append `:Z` to the parameter of the `-v` option, causing podman to relabel the directory on the host system to make it accessible to containers, which works but is probably not something you want for a rather temporary development thing like this.
+
 # Student template
 
 ## Purpose of this repository
