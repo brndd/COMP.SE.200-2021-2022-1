@@ -4,16 +4,16 @@
 
 The following functions are (to be) tested:
 
-- Memoize
-- IsEmpty
-- Slice
-- Clamp
-- ToFinite
-- IsTypedArray
-- Get
-- CamelCase
-- Compact
-- Chunk
+- isEmpty.js
+- chunk.js
+- camelCase.js
+- difference.js
+- defaultToAny.js
+- countBy.js
+- memoize.js
+- filter.js
+- castArray.js
+- endsWith.js
 
 # Container
 
