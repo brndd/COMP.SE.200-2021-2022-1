@@ -15,6 +15,25 @@ The following functions are (to be) tested:
 - castArray.js
 - endsWith.js
 
+# Usage
+
+## Installation 
+
+1. Clone the repository.
+2. Run `npm install` to install the dependencies.
+
+## Running the tests
+
+You can run the tests with `npm test`. This will print the result of the tests as well as a coverage overview into your console.
+
+You can produce full coverage output by running `npm run test-coverage`. This will create a directory called `coverage/` in the project directory, which will contain .html files for each function that contain human-readable coverage details similar to Coveralls.
+
+## Writing tests
+
+All .js files in the `test/` directory are automatically ran by `npm test` and the CI pipeline. The exact name of the file doesn't matter, but we have used the pattern `test_functionName.js`.
+
+The tests use the [Mocha testing framework](https://mochajs.org/) in tandem with the [Chai assertion library](https://www.chaijs.com). While they are quite simple, you may want to read the [Chai documentation](https://www.chaijs.com/api/bdd/) for the assertion syntax.
+
 # Container
 
 The supplied Dockerfile can be used to build a container to run the tests in. It has been tested with Podman, but is very simple and should also work with Docker. Here are brief instructions for its usage:
