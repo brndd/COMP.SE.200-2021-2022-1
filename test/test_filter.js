@@ -18,6 +18,10 @@ describe('filter()', function() {
     it("should return an empty object on empty collection", function() {
         expect(filter([], ({ active }) => !active)).to.deep.equal([[]]);
     });
+    //Null
+    it("should return an empty object on null collection", function() {
+        expect(filter(null, ({ active }) => !active)).to.deep.equal([[]]);
+    });
     // Numerical comparison
     it("should return when counts [10,20,30,40] by value > 25", function(){
         const vec = [10,20,30,40];
