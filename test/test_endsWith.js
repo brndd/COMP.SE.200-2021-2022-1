@@ -22,11 +22,12 @@ describe('endsWith()', function() {
     });
 
     //Empty target
+    //This is somewhat undefined behaviour
     it("should return true with params 'abc',''", function() {
         expect(endsWith('abc', '')).to.be.true;
     });
-    it("should return false with params 'abc','',1", function() {
-        expect(endsWith('abc', '', 1)).to.be.false;
+    it("should return true with params 'abc','',1", function() {
+        expect(endsWith('abc', '', 1)).to.be.true;
     });
     //Negative index
     it("should return false with params 'abc','',-1", function() {
