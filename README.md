@@ -2,7 +2,7 @@
 
 # Tested functions
 
-The following functions are (to be) tested:
+The following functions are tested:
 
 - isEmpty.js
 - chunk.js
