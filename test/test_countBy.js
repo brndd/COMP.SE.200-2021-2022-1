@@ -33,6 +33,6 @@ describe('countBy()', function() {
     it("should return { 'true': 1 } when counts property when it's true", function(){
         const obj = new Object();
         obj.exists = true;
-        expect(countBy(obj, value => value.exists)).to.deep.equal({ 'true': 1 });
+        expect(countBy([obj], value => value.exists)).to.deep.equal({ 'true': 1 });
     });
 });
