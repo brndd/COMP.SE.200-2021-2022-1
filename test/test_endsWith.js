@@ -42,4 +42,9 @@ describe('endsWith()', function() {
     it("should return false with params 'abc','abcdef'", function() {
         expect(endsWith('abc', 'abcdef')).to.be.false;
     });
+
+    //Position above length
+    it("should clamp length if it is too high", function() {
+        expect(endsWith('abc','c', 5)).to.be.true;
+    });
 });
