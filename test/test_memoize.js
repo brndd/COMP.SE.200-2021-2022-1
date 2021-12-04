@@ -56,6 +56,52 @@ describe('memoize()', function() {
     });
 
     //Misc tests
+    it("should throw if passed parameters that are not a function", function() {
+        expect(() => memoize(5)).to.throw();
+        expect(() => memoize(print, 5)).to.throw();
+    });
+
+    it("should default to Map if memoize.Cache is missing", function() {
+        memoize.Cache = null;
+        
+        const values = memoize(Object.values);
+        expect(values.cache).to.be.a("Map");
+
+        //Reset this
+        memoize.Cache = Map;
+    });
+
+    it("should work with a useless dummy cache", function() {
+        class DummyMap {
+            clear() {
+                return true;
+            }
+            delete() { 
+                return true;
+            }
+            get() { 
+                return false;
+            }
+            has() {
+                return false;
+            }
+            set() {
+                return false;
+            }
+        }
+        
+        memoize.Cache = DummyMap;
+
+        const object = { 'a': 1, 'b': 2 };
+        const values = memoize(Object.values);
+        expect(values(object)).to.eql([1, 2]);
+
+        object.a = 2;
+        expect(values(object)).to.eql([2, 2]);
+
+        memoize.Cache = Map;
+    });
+
     it("should speed up a horribly inefficient recursive fibonacci function", function() {
         const calculateTo = 100; //the first 100 numbers using this function will normally take a very long time to compute, timing out the test
 
