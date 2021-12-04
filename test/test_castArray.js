@@ -19,7 +19,7 @@ describe('castArray()', function() {
         expect(castArray(undefined)).to.deep.equal([undefined]);
     });
     it("should return [] when the argument is empty", function() {
-        expect(castArray()).to.deep.equal([]);
+        expect(castArray()).to.be.empty;
     });
     it("should return [1, 2, 3] when the argument is [1, 2, 3]", function() {
         expect(castArray([1, 2, 3])).to.deep.equal([1, 2, 3]);
